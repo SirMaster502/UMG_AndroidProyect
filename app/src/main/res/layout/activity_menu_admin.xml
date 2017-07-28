@@ -12,11 +12,11 @@
     tools:context="curso.umg.gt.umgappproject.MenuAdminActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout6"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <TextView
             android:id="@+id/textView4"
@@ -30,60 +30,49 @@
             android:textSize="30dp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnAddUser"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp"
+        android:drawableTop="@drawable/adduser"
+        android:onClick="goAdduser"
+        android:text="Agregar Usuario" />
+
+    <Button
+        android:id="@+id/btnAddservice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnAddUser"
+        android:layout_alignBottom="@+id/btnAddUser"
+        android:layout_alignEnd="@+id/btnListServices"
+        android:drawableTop="@drawable/addservice"
+        android:onClick="goAddService"
+        android:text="Agregar Servicio" />
+
+    <Button
+        android:id="@+id/btnListUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/linearLayout6"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout7"
-        android:gravity="center">
+        android:layout_marginTop="60dp"
+        android:contextClickable="true"
+        android:drawableTop="@drawable/listusers"
+        android:onClick="listUser"
+        android:text="Listar Usuarios" />
 
-        <ImageButton
-            android:id="@+id/btnListUsers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:contextClickable="true"
-            android:onClick="listUser"
-            app:srcCompat="@drawable/listusers" />
-
-        <ImageButton
-            android:id="@+id/btnListServices"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:onClick="listservices"
-            app:srcCompat="@drawable/listservices" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnListServices"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/linearLayout5"
-        android:layout_below="@+id/linearLayout7"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="23dp"
-        android:gravity="center">
-
-        <ImageButton
-            android:id="@+id/btnAddUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:onClick="goAdduser"
-            app:srcCompat="@drawable/adduser" />
-
-        <ImageButton
-            android:id="@+id/btnAddservice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:onClick="goAddService"
-            app:srcCompat="@drawable/addservice" />
-    </LinearLayout>
+        android:layout_alignBaseline="@+id/btnListUsers"
+        android:layout_alignBottom="@+id/btnListUsers"
+        android:layout_alignParentEnd="true"
+        android:drawableTop="@drawable/listservices"
+        android:onClick="listservices"
+        android:text="Listar Servicios" />
 
 </RelativeLayout>
