@@ -68,7 +68,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@+id/btnClose"
-            android:text="Guardar" />
+            android:background="@color/Green"
+            android:text="Guardar"
+            android:textColor="@color/White" />
 
         <Button
             android:id="@+id/btnCerrar"
@@ -77,7 +79,9 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:text="Cerrar" />
+            android:text="Cerrar"
+            android:textColor="@color/White"
+            android:background="@color/Blue_White"/>
 
         <Button
             android:id="@+id/btnBorrar"
@@ -85,8 +89,10 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/btnSave"
             android:layout_toLeftOf="@+id/btnSave"
-            android:text="Eliminar" />
+            android:background="@color/Danger"
+            android:text="Eliminar"
+            android:textColor="@color/White" />
 
     </LinearLayout>
 
- </LinearLayout>
+</LinearLayout>
