@@ -19,12 +19,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view){
-        String username = userName.getText().toString();
+        Intent intent = new Intent(this, ServiciosActivity.class);
+        startActivity(intent);
+
+       /* String username = userName.getText().toString();
         String password = pass.getText().toString();
         String tipoOperacion = "login";
         ConexionLogin conexionLogin = new ConexionLogin(this);
         conexionLogin.execute(tipoOperacion, username, password);
-
+*/
     }
 
     public void openRegistro(View view) {

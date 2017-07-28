@@ -4,6 +4,7 @@
 
     <!-- permiso -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Registro"></activity>
+        <activity android:name=".Registro" />
+        <activity android:name=".ServiciosActivity" />
+        <activity android:name=".DetalleServiciosActivity" />
+        <activity android:name=".SemestresViewActivity"></activity>
     </application>
 
 </manifest>
