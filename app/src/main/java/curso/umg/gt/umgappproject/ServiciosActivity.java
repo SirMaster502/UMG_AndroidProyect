@@ -52,7 +52,7 @@ public class ServiciosActivity extends AppCompatActivity implements android.view
 
     @Override
     public void onClick(View v) {
-
+        refreshScreen();
     }
 
 
