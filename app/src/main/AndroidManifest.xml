@@ -4,6 +4,7 @@
 
     <!-- permiso -->
     <uses-permission android:name="android.permission.INTERNET" />
+
     <permission android:name="android.permission.INTERNET" />
 
     <application
@@ -23,7 +24,8 @@
         <activity android:name=".Registro" />
         <activity android:name=".ServiciosActivity" />
         <activity android:name=".DetalleServiciosActivity" />
-        <activity android:name=".SemestresViewActivity"></activity>
+        <activity android:name=".SemestresViewActivity" />
+        <activity android:name=".EstudiantesActivity"></activity>
     </application>
 
 </manifest>
