@@ -33,9 +33,9 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/listservices"
         android:layout_marginBottom="60dp"
+        android:onClick="listservices"
         android:layout_above="@+id/btnAddservice"
-        android:layout_alignStart="@+id/btnAddservice"
-        android:onClick="listservices"/>
+        android:layout_alignStart="@+id/btnAddservice" />
 
     <ImageButton
         android:id="@+id/btnListUsers"
