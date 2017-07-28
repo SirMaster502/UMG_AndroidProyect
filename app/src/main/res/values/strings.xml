@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Login UMG</string>
-    <string name="user">User:</string>
+    <string name="user">Usario:</string>
     <string name="login">Iniciar sesión</string>
     <string name="nombres">Nombres:</string>
     <string name="usuario">Usuario:</string>
     <string name="apellidos">Apellidos:</string>
-    <string name="password">Password:</string>
+    <string name="password">Contraseña:</string>
     <string name="date">Fecha de Nacimiento:</string>
-    <string name="registrar">Agregar Estudiante</string>
+    <string name="registrar">Agregar Nuevo</string>
     <string name="agregar_servicio">Agregar Servicio</string>
     <string name="guardar">Agregar Actividad</string>
 </resources>
