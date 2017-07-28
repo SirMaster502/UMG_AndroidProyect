@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="curso.umg.gt.umgappproject.MenuAdminActivity">
+
+
+    <ImageButton
+        android:id="@+id/btnRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/adduser"
+        android:onClick="goAdduser"
+        android:layout_alignTop="@+id/btnAddservice"
+        android:layout_alignStart="@+id/btnListUsers" />
+
+    <ImageButton
+        android:id="@+id/btnAddservice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/addservice"
+        android:onClick="goAddService"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="73dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:id="@+id/btnListServices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/listservices"
+        android:layout_marginBottom="60dp"
+        android:layout_above="@+id/btnAddservice"
+        android:layout_alignStart="@+id/btnAddservice"
+        android:onClick="listservices"/>
+
+    <ImageButton
+        android:id="@+id/btnListUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/listusers"
+        android:onClick="listUser"
+        android:layout_marginStart="39dp"
+        android:layout_alignTop="@+id/btnListServices"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

@@ -124,9 +124,9 @@ public class ConexionLogin extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        if(result.toString().equals("admin"))
-        {
-            Intent i = new Intent(context, ServiciosActivity.class);
+        if(result.toString().equals("admin"))        {
+// comentado x Luis Lopez            Intent i = new Intent(context, ServiciosActivity.class);
+            Intent i = new Intent(context, MenuAdminActivity.class);
             context.startActivity(i);
 //            Intent i = new Intent(context, ListaUsuarios.class);
 //            context.startActivity(i);

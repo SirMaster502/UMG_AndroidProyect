@@ -26,7 +26,8 @@
         <activity android:name=".DetalleServiciosActivity" />
         <activity android:name=".SemestresViewActivity" />
         <activity android:name=".EstudiantesActivity" />
-        <activity android:name=".ListaUsuarios"></activity>
+        <activity android:name=".ListaUsuarios" />
+        <activity android:name=".MenuAdminActivity"></activity>
     </application>
 
 </manifest>
