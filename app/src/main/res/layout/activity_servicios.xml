@@ -31,6 +31,16 @@
             android:paddingLeft="5dp"
             android:paddingRight="5dp"/>
 
+        <Button
+            android:id="@+id/btnRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="openRegistroEstudiante"
+            android:text="@string/registrar"
+            android:background="@color/Blue"
+            android:textColor="@color/White" />
+
     </LinearLayout>
 
     <ListView

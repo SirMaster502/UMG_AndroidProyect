@@ -2,6 +2,7 @@ package curso.umg.gt.umgappproject;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 
 import java.io.BufferedReader;
@@ -84,7 +85,7 @@ public class ConexionLogin extends AsyncTask<String, Void, String> {
 
                 String post_data =
                         URLEncoder.encode("u_nombres", "UTF-8") + "=" + URLEncoder.encode(usr_nombres, "UTF-8") + "&"
-                +URLEncoder.encode("u_apellidos", "UTF-8") + "=" + URLEncoder.encode(usr_apellidos, "UTF-8") + "&"
+                                +URLEncoder.encode("u_apellidos", "UTF-8") + "=" + URLEncoder.encode(usr_apellidos, "UTF-8") + "&"
                                 +URLEncoder.encode("u_edad", "UTF-8") + "=" + URLEncoder.encode(usr_edad, "UTF-8") + "&"
                                 +URLEncoder.encode("u_username", "UTF-8") + "=" + URLEncoder.encode(usr_username, "UTF-8") + "&"
                                 + URLEncoder.encode("u_password", "UTF-8") + "=" + URLEncoder.encode(usr_password, "UTF-8");
@@ -118,14 +119,31 @@ public class ConexionLogin extends AsyncTask<String, Void, String> {
     protected void onPreExecute() {
 //        super.onPreExecute();
         alertDialog = new AlertDialog.Builder(context).create();
-        alertDialog.setTitle("Login Statuss");
+        alertDialog.setTitle("Estado");
     }
 
     @Override
     protected void onPostExecute(String result) {
-//        super.onPostExecute(aVoid);
-        alertDialog.setMessage(result);
-        alertDialog.show();
+        if(result.toString().equals("admin"))
+        {
+            Intent i = new Intent(context, ServiciosActivity.class);
+            context.startActivity(i);
+//            Intent i = new Intent(context, ListaUsuarios.class);
+//            context.startActivity(i);
+        }else if(result.toString().equals("user")){
+            Intent u = new Intent(context, EstudiantesActivity.class);
+            context.startActivity(u);
+        }
+        else if(result.toString().equals("ingreso")){
+            Intent ea = new Intent(context, ListaUsuarios.class);
+            context.startActivity(ea);
+        }
+        else
+        {
+            alertDialog.setMessage(result);
+            alertDialog.show();
+        }
+
     }
 
     @Override

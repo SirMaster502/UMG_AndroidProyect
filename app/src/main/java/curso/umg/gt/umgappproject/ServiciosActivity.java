@@ -36,6 +36,14 @@ public class ServiciosActivity extends AppCompatActivity implements android.view
         btAgregar.setOnClickListener(this);
     }
 
+    public void openListaEstudiantes(View view) {
+        startActivity(new Intent(this,ListaUsuarios.class));
+    }
+
+    public void openRegistroEstudiante(View view) {
+        startActivity(new Intent(this,Registro.class));
+    }
+
     @Override
     public void onResume() {
 
@@ -50,11 +58,12 @@ public class ServiciosActivity extends AppCompatActivity implements android.view
             Intent intent = new Intent(this, DetalleServiciosActivity.class);
             intent.putExtra("semestre_Id", 0);
             startActivity(intent);
-
         } else {
             refreshScreen();
         }
     }
+
+
 
     private void refreshScreen() {
 
