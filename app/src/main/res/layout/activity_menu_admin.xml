@@ -8,7 +8,7 @@
 
 
     <ImageButton
-        android:id="@+id/btnRegistro"
+        android:id="@+id/btnAddUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/adduser"
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/listusers"
         android:onClick="listUser"
-        android:layout_marginStart="39dp"
+        android:layout_marginStart="40dp"
         android:layout_alignTop="@+id/btnListServices"
         android:layout_alignParentStart="true" />
 </RelativeLayout>

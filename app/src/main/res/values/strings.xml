@@ -9,4 +9,5 @@
     <string name="date">Fecha de Nacimiento:</string>
     <string name="registrar">Agregar Estudiante</string>
     <string name="agregar_servicio">Agregar Servicio</string>
+    <string name="guardar">Agregar Actividad</string>
 </resources>

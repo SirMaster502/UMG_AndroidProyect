@@ -64,7 +64,7 @@
         android:drawableLeft="@drawable/save"
         android:drawablePadding="8dp"
         android:paddingRight="8dp"
-        android:text="Guardar"
+        android:text="@string/guardar"
         android:textColor="@color/White"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true" />

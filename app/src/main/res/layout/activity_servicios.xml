@@ -11,11 +11,13 @@
     tools:context="curso.umg.gt.umgappproject.ServiciosActivity">
 
 
-    <!--        <Button
-                android:id="@+id/btnListar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Listar Servicios" />-->
+<!--    <Button
+        android:id="@+id/btnListar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Listar Servicios" />-->
 
 
     <ListView

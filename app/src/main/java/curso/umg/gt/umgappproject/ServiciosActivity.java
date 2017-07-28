@@ -32,8 +32,7 @@ public class ServiciosActivity extends AppCompatActivity implements android.view
 //        btListar = (Button) findViewById(R.id.btnListar);
 //        btListar.setOnClickListener(this);
 
-        btAgregar = (Button) findViewById(R.id.btnAgregar);
-        btAgregar.setOnClickListener(this);
+
     }
 
     public void openListaEstudiantes(View view) {
@@ -53,14 +52,7 @@ public class ServiciosActivity extends AppCompatActivity implements android.view
 
     @Override
     public void onClick(View v) {
-        if (v == findViewById(R.id.btnAgregar)) {
 
-            Intent intent = new Intent(this, DetalleServiciosActivity.class);
-            intent.putExtra("semestre_Id", 0);
-            startActivity(intent);
-        } else {
-            refreshScreen();
-        }
     }
 
 
