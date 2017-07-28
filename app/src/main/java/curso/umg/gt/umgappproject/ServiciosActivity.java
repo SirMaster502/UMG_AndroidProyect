@@ -29,8 +29,8 @@ public class ServiciosActivity extends AppCompatActivity implements android.view
         restService = new RestService();
         setContentView(R.layout.activity_servicios);
 
-        btListar = (Button) findViewById(R.id.btnListar);
-        btListar.setOnClickListener(this);
+//        btListar = (Button) findViewById(R.id.btnListar);
+//        btListar.setOnClickListener(this);
 
         btAgregar = (Button) findViewById(R.id.btnAgregar);
         btAgregar.setOnClickListener(this);
