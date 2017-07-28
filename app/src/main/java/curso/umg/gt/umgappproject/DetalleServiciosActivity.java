@@ -93,6 +93,10 @@ public class DetalleServiciosActivity extends AppCompatActivity implements andro
                     @Override
                     public void success(Servicio servicio, Response response) {
                         Toast.makeText(DetalleServiciosActivity.this, "Se agregó el servicio", Toast.LENGTH_LONG).show();
+                        editTextDescripcion.setText("");
+                        editTextNombre.setText("");
+                        editTextHorario.setText("");
+
                     }
 
                     @Override
