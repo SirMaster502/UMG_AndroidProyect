@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/activity"
             android:gravity="center"
-            android:text="Agregar Actividad"
+            android:text="Agregar/Editar Actividad"
             android:textSize="30dp" />
     </LinearLayout>
 

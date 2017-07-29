@@ -9,7 +9,7 @@
     <string name="date">Fecha de Nacimiento:</string>
     <string name="registrar">Agregar Nuevo</string>
     <string name="agregar_servicio">Agregar Servicio</string>
-    <string name="guardar">Agregar Actividad</string>
+    <string name="guardar">Guardar</string>
     <string name="id">Id:</string>
     <string name="editar">Editar</string>
     <string name="eliminar">Eliminar</string>
