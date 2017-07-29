@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Login UMG</string>
+    <string name="app_name">APP UMG</string>
     <string name="user">Usario:</string>
     <string name="login">Iniciar sesión</string>
     <string name="nombres">Nombres:</string>
