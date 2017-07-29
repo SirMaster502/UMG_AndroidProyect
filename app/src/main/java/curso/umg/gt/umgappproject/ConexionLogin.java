@@ -34,6 +34,8 @@ public class ConexionLogin extends AsyncTask<String, Void, String> {
         String type = params[0];
         String login_url = "http://umgandroid.txolja.com/login.php";
         String registro_url = "http://umgandroid.txolja.com/register.php";
+        String update_url = "http://umgandroid.txolja.com/update.php";
+        String delete_url = "http://umgandroid.txolja.com/delete.php";
         if (type.equals("login")) {
             try {
                 String user_name = params[1];
@@ -112,6 +114,85 @@ public class ConexionLogin extends AsyncTask<String, Void, String> {
                 e.printStackTrace();
             }
         }
+        else if (type.equals("delete")) {
+            try {
+                String delete_id = params[1];
+                URL url = new URL(delete_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String post_data = URLEncoder.encode("delete_id", "UTF-8") + "=" + URLEncoder.encode(delete_id, "UTF-8");
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String result = "";
+                String line = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    result += line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return result;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if (type.equals("update")) {
+            try {
+                String del_id = params[1];
+                String del_nom = params[2];
+                String del_app = params[3];
+                String del_edad = params[4];
+                String del_user = params[5];
+                String del_pass = params[6];
+                URL url = new URL(update_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String post_data =
+                        URLEncoder.encode("del_id", "UTF-8") + "=" + URLEncoder.encode(del_id, "UTF-8") + "&"
+                                +URLEncoder.encode("del_nom", "UTF-8") + "=" + URLEncoder.encode(del_nom, "UTF-8") + "&"
+                                +URLEncoder.encode("del_app", "UTF-8") + "=" + URLEncoder.encode(del_app, "UTF-8") + "&"
+                                +URLEncoder.encode("del_edad", "UTF-8") + "=" + URLEncoder.encode(del_edad, "UTF-8") + "&"
+                                +URLEncoder.encode("del_user", "UTF-8") + "=" + URLEncoder.encode(del_user, "UTF-8") + "&"
+                                + URLEncoder.encode("del_pass", "UTF-8") + "=" + URLEncoder.encode(del_pass, "UTF-8");
+
+
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String result = "";
+                String line = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    result += line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return result;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         return null;
     }
 
@@ -137,6 +218,14 @@ public class ConexionLogin extends AsyncTask<String, Void, String> {
         else if(result.toString().equals("ingreso")){
             Intent ea = new Intent(context, ListaUsuarios.class);
             context.startActivity(ea);
+        }
+        else if(result.toString().equals("update")){
+            Intent up = new Intent(context, ListaUsuarios.class);
+            context.startActivity(up);
+        }
+        else if(result.toString().equals("delete")){
+            Intent del = new Intent(context, ListaUsuarios.class);
+            context.startActivity(del);
         }
         else
         {
