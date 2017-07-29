@@ -1,17 +1,16 @@
 package curso.umg.gt.umgappproject;
 
+
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -69,27 +68,24 @@ public class ListaUsuarios extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Intent intent = new Intent(ListaUsuarios.this, ViewEstudiante.class);
-//                intent.putExtra("aid", lv.getItemAtPosition(i).toString());
-//                startActivity(intent);
                 Intent intent = new Intent(ListaUsuarios.this, ViewEstudiante.class);
-                HashMap<String,String> map =(HashMap)adapterView.getItemAtPosition(i);
+                HashMap<String, String> map = (HashMap) adapterView.getItemAtPosition(i);
                 String esId = map.get("id").toString();
                 String esNom = map.get("nombres").toString();
                 String esApp = map.get("apellidos").toString();
                 String esEdad = map.get("edad").toString();
                 String esUser = map.get("username").toString();
                 String esPass = map.get("password").toString();
-                intent.putExtra("id",esId);
-                intent.putExtra("nombres",esNom);
-                intent.putExtra("apellidos",esApp);
-                intent.putExtra("edad",esEdad);
-                intent.putExtra("username",esUser);
-                intent.putExtra("password",esPass);
+                intent.putExtra("id", esId);
+                intent.putExtra("nombres", esNom);
+                intent.putExtra("apellidos", esApp);
+                intent.putExtra("edad", esEdad);
+                intent.putExtra("username", esUser);
+                intent.putExtra("password", esPass);
                 startActivity(intent);
             }
-
         });
+
 
     }
 

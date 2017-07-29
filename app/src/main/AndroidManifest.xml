@@ -28,7 +28,8 @@
         <activity android:name=".EstudiantesActivity" />
         <activity android:name=".ListaUsuarios" />
         <activity android:name=".MenuAdminActivity" />
-        <activity android:name=".EstudianteViewActivity"></activity>
+        <activity android:name=".EstudianteViewActivity" />
+        <activity android:name=".ViewEstudiante"></activity>
     </application>
 
 </manifest>

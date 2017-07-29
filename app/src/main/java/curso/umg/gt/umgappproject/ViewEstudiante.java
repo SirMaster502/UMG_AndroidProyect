@@ -5,15 +5,13 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import android.view.View;
 import android.widget.TextView;
 
-
 public class ViewEstudiante extends AppCompatActivity {
-
     private TextView tv_id,tv_nom,tv_app,tv_edad, tv_user, tv_pass;
     private String se_id,se_nom,se_app,se_edad,se_user,se_pass;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +42,7 @@ public class ViewEstudiante extends AppCompatActivity {
         tv_pass.setText(se_pass);
 
     }
+
     public void updateEstudiante(View view){
         String uid =  tv_id.getText().toString();
         String unom =  tv_nom.getText().toString();
@@ -56,7 +55,6 @@ public class ViewEstudiante extends AppCompatActivity {
         conexionLogin.execute(tipoOperacion, uid, unom,uapp,uedad,uuser,upass);
 
     }
-
     public void deleteEstudiante(View view){
         String did =  tv_id.getText().toString();
         String tipoOperacion = "delete";
@@ -88,4 +86,7 @@ public class ViewEstudiante extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
+
+
+
 }
